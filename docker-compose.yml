@@ -47,3 +47,38 @@ services:
 volumes:
   redis:
   postgres:
+
+# dbdata:
+#   image: postgres:9.4.10
+#   volumes:
+#     - /var/lib/postgresql/data
+#   command: "true"
+
+# db:
+#   image: postgres:9.4.10
+#   volumes_from:
+#     - dbdata
+#   ports:
+#     - "5432:5432"
+#   environment:
+#     POSTGRES_USER: postgres
+#     POSTGRES_PASSWORD: conecta
+
+# mailcatcher:
+#   image: yappabe/mailcatcher
+#   ports:
+#     - "1025:1025"
+#     - "1080:1080"
+# esdata:
+#   image: elasticsearch:1.3
+#   volumes:
+#     - /usr/share/elasticsearch/data
+#   command: "true"
+
+# es:
+#   image: elasticsearch:1.3
+#   volumes_from:
+#     - esdata
+#   ports:
+#     - "9200:9200"
+#     - "9300:9300"
